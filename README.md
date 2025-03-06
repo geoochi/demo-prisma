@@ -33,3 +33,8 @@ model Post {
 ```bash
 pnpm prisma generate
 ```
+
+5. initialize the database
+```bash
+pnpm prisma db push
+```
