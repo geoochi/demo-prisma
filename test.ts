@@ -3,21 +3,28 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 async function main() {
-  const user = await prisma.user.create({
+  // const user = await prisma.user.create({
+  //   data: {
+  //     email: 'alice@prisma.io',
+  //     name: 'Alice',
+  //   },
+  // })
+  // console.log(user)
+  // const post = await prisma.post.create({
+  //   data: {
+  //     authorId: user.id,
+  //     title: 'Hello World',
+  //     content: 'This is a test post',
+  //   },
+  // })
+  // console.log(post)
+  const res = await prisma.post.create({
     data: {
-      email: 'alice@prisma.io',
-      name: 'Alice',
+      authorId: 1,
+      title: 'new title',
     },
   })
-  console.log(user)
-  const post = await prisma.post.create({
-    data: {
-      authorId: user.id,
-      title: 'Hello World',
-      content: 'This is a test post',
-    },
-  })
-  console.log(post)
+  console.log(res)
 }
 
 main()
