@@ -23,5 +23,5 @@ model Post {
   author    User    @relation(fields: [authorId], references: [id])
   title     String
   content   String?
-  published Boolean @default(false)
+  // published Boolean @default(false)
 }

@@ -84,3 +84,30 @@ main()
 ```bash
 pnpm prisma studio
 ```
+
+8. modify model
+
+- change model
+
+```prisma
+model Post {
+  id        Int     @id @default(autoincrement())
+  authorId  Int
+  author    User    @relation(fields: [authorId], references: [id])
+  title     String
+  content   String?
+  // published Boolean @default(false)
+}
+```
+
+- generate
+
+```bash
+pnpm prisma generate
+```
+
+   - update db
+
+```bash
+pnpm prisma db push
+```
