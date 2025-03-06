@@ -78,3 +78,9 @@ main()
     await prisma.$disconnect()
   })
 ```
+
+7. start the prisma studio
+
+```bash
+pnpm prisma studio
+```
