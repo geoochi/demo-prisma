@@ -28,3 +28,8 @@ model Post {
   authorId  Int
 }
 ```
+
+4. Generate Prisma client
+```bash
+pnpm prisma generate
+```
